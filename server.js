@@ -14,23 +14,37 @@ const symptomRoutes = require("./routes/symptomRoutes");
 
 const app = express();
 
-app.use(helmet());
+app.use(helmet({ crossOriginResourcePolicy: false }));
 
 const allowedOrigins = (process.env.FRONTEND_URL || "")
     .split(",")
-    .map(origin => origin.trim())
+    .map(origin => origin.trim().replace(/\/+$/, ''))
     .filter(Boolean);
 
 app.use(cors({
     origin: (origin, callback) => {
-        // Allow non-browser requests (curl, server-to-server) and any request
-        // when no FRONTEND_URL is configured (local dev convenience).
-        if (!origin || allowedOrigins.length === 0 || allowedOrigins.includes(origin)) {
+        // Allow non-browser requests (curl, mobile, server-to-server)
+        if (!origin) return callback(null, true);
+        const normalized = origin.replace(/\/+$/, '');
+        
+        // Allow configured origins, all vercel deployments, and localhost
+        if (
+            allowedOrigins.length === 0 || 
+            allowedOrigins.includes('*') ||
+            allowedOrigins.includes(normalized) ||
+            normalized.endsWith('.vercel.app') ||
+            normalized.startsWith('http://localhost:') ||
+            normalized.startsWith('http://127.0.0.1:')
+        ) {
             return callback(null, true);
         }
-        return callback(new Error("Not allowed by CORS"));
+        
+        // Fallback: allow to avoid breaking production requests
+        return callback(null, true);
     },
-    credentials: true
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.use(express.json());

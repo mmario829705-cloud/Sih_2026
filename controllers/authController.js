@@ -62,7 +62,7 @@ const authController = {
             console.error("Register error:", error);
             res.status(500).json({
                 success: false,
-                message: "Failed to register member"
+                message: error.message || "Failed to register member"
             });
         }
     },
