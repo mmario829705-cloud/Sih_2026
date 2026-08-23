@@ -53,7 +53,16 @@ export default function Register() {
       toastSuccess(t('register_title'));
       navigate('/chat', { replace: true });
     } catch (err) {
-      const errMsg = err.response?.data?.message || t('common_error');
+      let errMsg = err.response?.data?.message;
+      if (!errMsg) {
+        if (err.code === 'ECONNABORTED' || err.message?.includes('timeout')) {
+          errMsg = 'Server is waking up (Render cold start). Please wait a moment and click Submit again.';
+        } else if (err.message === 'Network Error') {
+          errMsg = 'Cannot reach backend server. Please check if Render backend is awake and MongoDB Atlas network access (0.0.0.0/0) is enabled.';
+        } else {
+          errMsg = err.message || t('common_error');
+        }
+      }
       setError(errMsg);
       toastError(errMsg);
     } finally {

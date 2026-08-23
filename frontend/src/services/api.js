@@ -1,12 +1,18 @@
 import axios from 'axios';
 
-// Automatically detect production Vercel deployment vs local dev
+// Automatically detect production deployment vs local dev
 const getBaseURL = () => {
   if (import.meta.env.VITE_API_URL) {
     return import.meta.env.VITE_API_URL;
   }
-  if (typeof window !== 'undefined' && window.location.hostname.includes('vercel.app')) {
-    return 'https://arogya-connect-api.onrender.com/api';
+  if (typeof window !== 'undefined') {
+    const host = window.location.hostname;
+    if (host.includes('vercel.app')) {
+      return 'https://arogya-connect-api.onrender.com/api';
+    }
+    if (host.includes('netlify.app') || host.includes('netlify.com')) {
+      return 'https://arogya-connect-api.onrender.com/api';
+    }
   }
   return '/api';
 };
