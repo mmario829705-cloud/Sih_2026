@@ -24,8 +24,6 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
 }));
 
-app.options('*', cors({ origin: true, credentials: true }));
-
 app.use(express.json());
 
 const PORT = process.env.PORT || 8000;
