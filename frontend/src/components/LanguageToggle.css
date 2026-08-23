@@ -1,0 +1,34 @@
+.lang-toggle {
+  display: inline-flex;
+  padding: 3px;
+  background: var(--sand-100);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  box-shadow: inset 0 1px 2px rgba(15, 30, 25, 0.04);
+}
+
+.lang-toggle-btn {
+  border: none;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.lang-toggle-btn:hover:not(.active) {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.lang-toggle-btn.active {
+  background: var(--teal);
+  color: #ffffff;
+  box-shadow: var(--shadow-xs);
+  font-weight: 700;
+}

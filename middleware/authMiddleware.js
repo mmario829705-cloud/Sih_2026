@@ -1,0 +1,36 @@
+const jwt = require("jsonwebtoken");
+const Member = require("../models/Member");
+
+const authMiddleware = async (req, res, next) => {
+    try {
+        const token = req.header("Authorization")?.replace("Bearer ", "");
+
+        if (!token) {
+            return res.status(401).json({
+                success: false,
+                message: "Access denied. No token provided."
+            });
+        }
+
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const member = await Member.findById(decoded.id).select("-password");
+
+        if (!member) {
+            return res.status(401).json({
+                success: false,
+                message: "Invalid token. Member not found."
+            });
+        }
+
+        req.member = member;
+        next();
+    } catch (error) {
+        console.error("Auth middleware error:", error.message);
+        res.status(401).json({
+            success: false,
+            message: "Invalid token."
+        });
+    }
+};
+
+module.exports = authMiddleware;
