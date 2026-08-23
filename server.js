@@ -16,36 +16,15 @@ const app = express();
 
 app.use(helmet({ crossOriginResourcePolicy: false }));
 
-const allowedOrigins = (process.env.FRONTEND_URL || "")
-    .split(",")
-    .map(origin => origin.trim().replace(/\/+$/, ''))
-    .filter(Boolean);
-
+// Fully permissive CORS: reflect origin to allow Vercel, localhost, and any client
 app.use(cors({
-    origin: (origin, callback) => {
-        // Allow non-browser requests (curl, mobile, server-to-server)
-        if (!origin) return callback(null, true);
-        const normalized = origin.replace(/\/+$/, '');
-        
-        // Allow configured origins, all vercel deployments, and localhost
-        if (
-            allowedOrigins.length === 0 || 
-            allowedOrigins.includes('*') ||
-            allowedOrigins.includes(normalized) ||
-            normalized.endsWith('.vercel.app') ||
-            normalized.startsWith('http://localhost:') ||
-            normalized.startsWith('http://127.0.0.1:')
-        ) {
-            return callback(null, true);
-        }
-        
-        // Fallback: allow to avoid breaking production requests
-        return callback(null, true);
-    },
+    origin: true,
     credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
 }));
+
+app.options('*', cors({ origin: true, credentials: true }));
 
 app.use(express.json());
 
