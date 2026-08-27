@@ -1,0 +1,122 @@
+/* ============================================================
+   AC — Arogya Connections Logo Styling
+   ============================================================ */
+
+.ac-logo-mark-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 2px;
+  box-shadow: var(--shadow-xs);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+.ac-logo-mark-wrap:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(15, 93, 77, 0.15);
+}
+
+.ac-logo-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ac-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Full / Horizontal Branding Layout */
+.ac-logo-full-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ac-logo-full-wrap.is-stacked {
+  flex-direction: column;
+  text-align: center;
+  gap: 8px;
+}
+
+.ac-logo-full-wrap.is-horizontal {
+  flex-direction: row;
+  align-items: center;
+}
+
+.ac-logo-text-box {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.ac-logo-brand-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: var(--teal-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-word {
+  color: #0F5D4D;
+}
+
+.brand-o-leaf {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1px;
+}
+
+.o-char {
+  color: #16A34A;
+  font-weight: 900;
+}
+
+.leaf-svg {
+  position: absolute;
+  top: 3px;
+}
+
+.ac-logo-connections-sub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 3px;
+}
+
+.conn-line {
+  height: 1px;
+  background: #22C55E;
+  flex: 1;
+}
+
+.conn-text {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #0F5D4D;
+}
+
+.ac-logo-assist-tag {
+  font-size: 7.5px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: #16A34A;
+  text-transform: uppercase;
+  margin-top: 3px;
+  text-align: center;
+}
