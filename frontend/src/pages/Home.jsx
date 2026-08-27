@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import TriageBadge from '../components/TriageBadge';
+import AppLogo from '../components/AppLogo';
 import { 
   IconMessageSquare, 
   IconShieldCheck, 
@@ -296,7 +297,7 @@ export default function Home() {
           <div className="feature-grid">
             <div className="card feature-card card-elevated">
               <div className="feature-icon feature-icon-teal" aria-hidden="true">
-                <span className="feature-glyph">ఆ</span>
+                <AppLogo size={32} variant="mark" />
               </div>
               <h3>{t('feature1_title')}</h3>
               <p>{t('feature1_body')}</p>
@@ -459,7 +460,7 @@ export default function Home() {
         <div className="container footer-inner">
           <div className="footer-brand-col">
             <div className="footer-logo">
-              <span className="navbar-mark">ఆ</span>
+              <AppLogo size={36} variant="mark" />
               <span className="footer-title">{t('appName')}</span>
             </div>
             <p className="footer-tagline">{t('tagline')}</p>

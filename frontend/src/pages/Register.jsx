@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { useToast } from '../context/ToastContext';
+import AppLogo from '../components/AppLogo';
 import { IconAlertCircle, IconShieldCheck, IconChevronRight } from '../components/Icons';
 import './Auth.css';
 
@@ -74,7 +75,7 @@ export default function Register() {
     <div className="auth-page">
       <div className="card auth-card card-elevated" style={{ maxWidth: 480 }}>
         <div className="auth-card-top">
-          <span className="navbar-mark" style={{ margin: '0 auto 14px' }}>ఆ</span>
+          <AppLogo size={64} variant="mark" className="auth-logo" />
           <h1 className="auth-title">{t('register_title')}</h1>
           <p className="auth-subtitle">{t('register_subtitle')}</p>
         </div>

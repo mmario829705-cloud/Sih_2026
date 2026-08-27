@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageToggle from './LanguageToggle';
+import AppLogo from './AppLogo';
 import { 
   IconMessageSquare, 
   IconClock, 
