@@ -30,6 +30,18 @@
   align-items: flex-start;
 }
 
+.hero-logo-wrap {
+  margin-bottom: 18px;
+}
+
+.hero-logo-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
 .hero-title {
   font-size: clamp(2.1rem, 3.8vw, 3.2rem);
   margin: 16px 0 18px;

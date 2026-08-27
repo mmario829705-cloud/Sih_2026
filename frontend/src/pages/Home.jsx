@@ -21,6 +21,8 @@ import {
 } from '../components/Icons';
 import './Home.css';
 
+const LOGO_URL = '/src/assets/logo.jpeg';
+
 const DEMO_CONVERSATIONS = {
   Telugu: [
     { sender: 'user', text: 'నాకు రెండు రోజులుగా తీవ్రమైన జ్వరం మరియు ఒళ్ళు నొప్పులు ఉన్నాయి.' },
@@ -62,6 +64,9 @@ export default function Home() {
       <section className="hero" aria-label="Introduction">
         <div className="container hero-grid">
           <div className="hero-copy">
+            <div className="hero-logo-wrap">
+              <img src={LOGO_URL} alt="Aarogya Connect" className="hero-logo-img" />
+            </div>
             <span className="eyebrow">{t('hero_eyebrow')}</span>
             <h1 className="hero-title">{t('hero_title')}</h1>
             <p className="hero-body">{t('hero_body')}</p>

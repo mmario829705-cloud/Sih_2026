@@ -130,8 +130,8 @@ const translations = {
 
     // PHCs
     phcs_title: 'PHC & Hospital Directory',
-    phcs_subtitle: 'Explore government Primary Health Centres across 26 Andhra Pradesh districts',
-    phcs_empty: 'No health centers found matching your filters.',
+    phcs_subtitle: 'Explore government and private hospitals across 26 Andhra Pradesh districts',
+    phcs_empty: 'No hospitals found matching your filters.',
     phcs_district: 'District',
     phcs_mandal: 'Mandal Search',
     phcs_mandal_placeholder: 'Type mandal name...',
@@ -141,9 +141,14 @@ const translations = {
     phcs_filter_chc: 'CHC (Community)',
     phcs_filter_dh: 'DH (District Hospital)',
     phcs_filter_ah: 'AH (Area Hospital)',
+    phcs_category_all: 'All Categories',
+    phcs_category_government: 'Government',
+    phcs_category_private: 'Private',
+    phcs_section_government: 'Government Hospitals',
+    phcs_section_private: 'Private Hospitals',
     phcs_search: 'Search',
     phcs_reset: 'Reset Filters',
-    phcs_call: 'Call Center',
+    phcs_call: 'Call Hospital',
 
     // Profile
     profile_title: 'Member Profile',
@@ -299,8 +304,8 @@ const translations = {
 
     // PHCs
     phcs_title: 'PHC & ఆసుపత్రుల డైరెక్టరీ',
-    phcs_subtitle: 'ఆంధ్రప్రదేశ్‌లోని 26 జిల్లాల ప్రభుత్వ ప్రాథమిక ఆరోగ్య కేంద్రాల వివరాలు',
-    phcs_empty: 'మీ శోధనకు సరిపోయే ఆరోగ్య కేంద్రాలు కనుగొనలేకపోయాయి.',
+    phcs_subtitle: 'ఆంధ్రప్రదేశ్‌లోని 26 జిల్లాల ప్రభుత్వ మరియు ప్రైవేట్ ఆసుపత్రుల వివరాలు',
+    phcs_empty: 'మీ శోధనకు సరిపోయే ఆసుపత్రులు కనుగొనలేకపోయాయి.',
     phcs_district: 'జిల్లా ఎంపిక',
     phcs_mandal: 'మండలం శోధన',
     phcs_mandal_placeholder: 'మండలం పేరు టైప్ చేయండి...',
@@ -310,9 +315,14 @@ const translations = {
     phcs_filter_chc: 'CHC (కమ్యూనిటీ హెల్త్ సెంటర్)',
     phcs_filter_dh: 'DH (జిల్లా ఆసుపత్రి)',
     phcs_filter_ah: 'AH (ఏరియా ఆసుపత్రి)',
+    phcs_category_all: 'అన్ని వర్గాలు',
+    phcs_category_government: 'ప్రభుత్వ',
+    phcs_category_private: 'ప్రైవేట్',
+    phcs_section_government: 'ప్రభుత్వ ఆసుపత్రులు',
+    phcs_section_private: 'ప్రైవేట్ ఆసుపత్రులు',
     phcs_search: 'శోధించండి',
     phcs_reset: 'రీసెట్ చేయండి',
-    phcs_call: 'కాల్ చేయండి',
+    phcs_call: 'ఆసుపత్రికి కాల్ చేయండి',
 
     // Profile
     profile_title: 'సభ్యుడి ప్రొఫైల్',

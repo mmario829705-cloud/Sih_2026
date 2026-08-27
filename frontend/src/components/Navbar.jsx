@@ -56,7 +56,7 @@ export default function Navbar() {
       <div className="container navbar-inner">
         {/* Brand */}
         <Link to="/" className="navbar-brand" aria-label={t('appName')}>
-          <span className="navbar-mark" aria-hidden="true">ఆ</span>
+          <img src="/src/assets/logo.jpeg" alt="Aarogya Connect" className="navbar-logo-img" />
           <div className="navbar-brand-text">
             <span className="navbar-name">{t('appName')}</span>
             <span className="navbar-badge">
@@ -149,7 +149,7 @@ export default function Navbar() {
           <div className="mobile-drawer" onClick={e => e.stopPropagation()}>
             <div className="mobile-drawer-header">
               <div className="mobile-drawer-title">
-                <span className="navbar-mark">ఆ</span>
+                <img src="/src/assets/logo.jpeg" alt="Aarogya Connect" className="navbar-logo-img" />
                 <span>{t('appName')}</span>
               </div>
               <button 

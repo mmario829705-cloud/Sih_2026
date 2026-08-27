@@ -237,22 +237,107 @@ const PHC_SEED = [
   { name: "Narasapuram PHC", district: "West Godavari", mandal: "Narasapuram", type: "PHC" },
   { name: "Tadepalligudem PHC", district: "West Godavari", mandal: "Tadepalligudem", type: "PHC" },
   { name: "Kovvur PHC", district: "West Godavari", mandal: "Kovvur", type: "PHC" },
-  { name: "Kadapa District Hospital", district: "YSR Kadapa", mandal: "Kadapa", type: "DH" },
-  { name: "Pulivendula PHC", district: "YSR Kadapa", mandal: "Pulivendula", type: "PHC" },
-  { name: "Badvel PHC", district: "YSR Kadapa", mandal: "Badvel", type: "PHC" },
-  { name: "Jammalamadugu PHC", district: "YSR Kadapa", mandal: "Jammalamadugu", type: "PHC" }
+  { name: "Kadapa District Hospital", district: "YSR Kadapa", mandal: "Kadapa", type: "DH", phone: "", category: "GOVERNMENT" },
+  { name: "Pulivendula PHC", district: "YSR Kadapa", mandal: "Pulivendula", type: "PHC", phone: "" },
+  { name: "Badvel PHC", district: "YSR Kadapa", mandal: "Badvel", type: "PHC", phone: "" },
+  { name: "Jammalamadugu PHC", district: "YSR Kadapa", mandal: "Jammalamadugu", type: "PHC", phone: "" },
+
+  { name: "Area Hospital, Paderu", district: "Alluri Sitharama Raju", mandal: "Paderu", type: "AH", phone: "089732 242222", category: "GOVERNMENT" },
+  { name: "KIMS-Icon Hospital", district: "Alluri Sitharama Raju", mandal: "Paderu", type: "OTHER", phone: "0891 660 9999", category: "PRIVATE", note: "Serving the region via Vizag hub." },
+
+  { name: "Area Hospital, Anakapalli", district: "Anakapalli", mandal: "Anakapalli", type: "AH", phone: "089242 222343", category: "GOVERNMENT" },
+  { name: "NTR Trust Hospital / Sunshine Hospital", district: "Anakapalli", mandal: "Anakapalli", type: "OTHER", phone: "08924 223 555", category: "PRIVATE" },
+
+  { name: "Government General Hospital, Anantapur", district: "Anantapur", mandal: "Anantapur", type: "DH", phone: "085542 750434", category: "GOVERNMENT" },
+  { name: "KIMS Saveera Hospital", district: "Anantapur", mandal: "Anantapur", type: "OTHER", phone: "08554 273 701", category: "PRIVATE" },
+
+  { name: "Government Area Hospital, Rayachoty", district: "Annamayya", mandal: "Rayachoti", type: "AH", phone: "085612 256225", category: "GOVERNMENT" },
+  { name: "Spandana Super Speciality Hospital", district: "Annamayya", mandal: "Rayachoti", type: "OTHER", phone: "08561 224 455", category: "PRIVATE" },
+
+  { name: "Area Hospital, Bapatla", district: "Bapatla", mandal: "Bapatla", type: "AH", phone: "084382 210456", category: "GOVERNMENT" },
+  { name: "Srinivasa Super Speciality Hospital", district: "Bapatla", mandal: "Bapatla", type: "OTHER", phone: "08643 224 455", category: "PRIVATE" },
+
+  { name: "Government District Hospital, Chittoor", district: "Chittoor", mandal: "Chittoor", type: "DH", phone: "085722 352327", category: "GOVERNMENT" },
+  { name: "Apollo Khiladi Hospital", district: "Chittoor", mandal: "Chittoor", type: "OTHER", phone: "08572 227 800", category: "PRIVATE" },
+
+  { name: "Government Area Hospital, Amalapuram", district: "Dr. B.R. Ambedkar Konaseema", mandal: "Amalapuram", type: "AH", phone: "088562 342218", category: "GOVERNMENT" },
+  { name: "Amalapuram KIMS Hospital", district: "Dr. B.R. Ambedkar Konaseema", mandal: "Amalapuram", type: "OTHER", phone: "08856 226 600", category: "PRIVATE" },
+
+  { name: "Government Hospital, Rajahmundry", district: "East Godavari", mandal: "Rajahmundry", type: "DH", phone: "088324 222029", category: "GOVERNMENT" },
+  { name: "Swami Vaidyalaya SuperSpeciality Hospital", district: "East Godavari", mandal: "Rajahmundry", type: "OTHER", phone: "099665 91177", category: "PRIVATE" },
+
+  { name: "District Government Hospital, Eluru", district: "Eluru", mandal: "Eluru", type: "DH", phone: "088122 301231", category: "GOVERNMENT" },
+  { name: "Asram Eluru Medical College & Hospital", district: "Eluru", mandal: "Eluru", type: "OTHER", phone: "08812 288 000", category: "PRIVATE" },
+
+  { name: "Government General Hospital, Guntur", district: "Guntur", mandal: "Guntur", type: "DH", phone: "086322 222111", category: "GOVERNMENT" },
+  { name: "Aster Ramesh Hospital", district: "Guntur", mandal: "Guntur", type: "OTHER", phone: "0863 237 7777", category: "PRIVATE" },
+
+  { name: "Government General Hospital, Kakinada", district: "Kakinada", mandal: "Kakinada", type: "DH", phone: "088423 633331", category: "GOVERNMENT" },
+  { name: "Medicover Hospitals - Kakinada", district: "Kakinada", mandal: "Kakinada", type: "OTHER", phone: "040 6833 4455", category: "PRIVATE" },
+
+  { name: "District Headquarters Hospital, Machilipatnam", district: "Krishna", mandal: "Machilipatnam", type: "DH", phone: "086722 522441", category: "GOVERNMENT" },
+  { name: "Andhra Hospitals", district: "Krishna", mandal: "Machilipatnam", type: "OTHER", phone: "08672 223 344", category: "PRIVATE" },
+
+  { name: "Government General Hospital, Kurnool", district: "Kurnool", mandal: "Kurnool", type: "DH", phone: "085182 755881", category: "GOVERNMENT" },
+  { name: "KIMS Hospital Kurnool", district: "Kurnool", mandal: "Kurnool", type: "OTHER", phone: "08518 244 444", category: "PRIVATE" },
+
+  { name: "Government Hospital, Nandyal", district: "Nandyal", mandal: "Nandyal", type: "DH", phone: "085142 221221", category: "GOVERNMENT" },
+  { name: "Suraksha Super Speciality Hospital", district: "Nandyal", mandal: "Nandyal", type: "OTHER", phone: "08514 246 810", category: "PRIVATE" },
+
+  { name: "Government General Hospital, Vijayawada", district: "NTR District", mandal: "Vijayawada", type: "DH", phone: "086625 74757", category: "GOVERNMENT" },
+  { name: "Manipal Hospital Vijayawada", district: "NTR District", mandal: "Vijayawada", type: "OTHER", phone: "0866 228 9100", category: "PRIVATE" },
+
+  { name: "Government Area Hospital, Narasaraopet", district: "Palnadu", mandal: "Narasaraopet", type: "AH", phone: "086472 220331", category: "GOVERNMENT" },
+  { name: "Lalitha Super Speciality Hospital", district: "Palnadu", mandal: "Narasaraopet", type: "OTHER", phone: "08647 234 567", category: "PRIVATE" },
+
+  { name: "Area Hospital, Parvathipuram", district: "Parvathipuram Manyam", mandal: "Parvathipuram", type: "AH", phone: "089632 220441", category: "GOVERNMENT" },
+  { name: "Prajwala Hospital", district: "Parvathipuram Manyam", mandal: "Parvathipuram", type: "OTHER", phone: "08963 221 100", category: "PRIVATE" },
+
+  { name: "Government General Hospital, Ongole", district: "Prakasam", mandal: "Ongole", type: "DH", phone: "085922 803331", category: "GOVERNMENT" },
+  { name: "KIMS Ongole Hospital", district: "Prakasam", mandal: "Ongole", type: "OTHER", phone: "08592 663 333", category: "PRIVATE" },
+
+  { name: "Dodla Subbareddy Government General Hospital, Nellore", district: "Sri Potti Sriramulu Nellore", mandal: "Nellore", type: "DH", phone: "086123 23282", category: "GOVERNMENT" },
+  { name: "Medicover Hospitals - Nellore", district: "Sri Potti Sriramulu Nellore", mandal: "Nellore", type: "OTHER", phone: "040 6833 4455", category: "PRIVATE" },
+
+  { name: "Government General Hospital, Puttaparthi", district: "Sri Sathya Sai", mandal: "Puttaparthi", type: "DH", phone: "085552 87222", category: "GOVERNMENT" },
+  { name: "Sri Sathya Sai Institute of Higher Medical Sciences", district: "Sri Sathya Sai", mandal: "Puttaparthi", type: "OTHER", phone: "08555 287 388", category: "PRIVATE" },
+
+  { name: "Government General Hospital, Srikakulam", district: "Srikakulam", mandal: "Srikakulam", type: "DH", phone: "089422 22333", category: "GOVERNMENT" },
+  { name: "Medicover Hospitals Srikakulam", district: "Srikakulam", mandal: "Srikakulam", type: "OTHER", phone: "040 6833 4455", category: "PRIVATE" },
+
+  { name: "SVRR Government General Hospital, Tirupati", district: "Tirupati", mandal: "Tirupati", type: "DH", phone: "087722 55655", category: "GOVERNMENT" },
+  { name: "Amara Hospital", district: "Tirupati", mandal: "Tirupati", type: "OTHER", phone: "079939 33777", category: "PRIVATE" },
+
+  { name: "King George Hospital (KGH), Visakhapatnam", district: "Visakhapatnam", mandal: "Visakhapatnam", type: "DH", phone: "089125 64891", category: "GOVERNMENT" },
+  { name: "Apollo Hospitals, Visakhapatnam", district: "Visakhapatnam", mandal: "Visakhapatnam", type: "OTHER", phone: "0891 272 7272", category: "PRIVATE" },
+
+  { name: "District Hospital, Vizianagaram", district: "Vizianagaram", mandal: "Vizianagaram", type: "DH", phone: "089222 73222", category: "GOVERNMENT" },
+  { name: "Medicover Hospitals - Vizianagaram", district: "Vizianagaram", mandal: "Vizianagaram", type: "OTHER", phone: "040 6833 4455", category: "PRIVATE" },
+
+  { name: "Government Area Hospital, Bhimavaram", district: "West Godavari", mandal: "Bhimavaram", type: "AH", phone: "081622 22411", category: "GOVERNMENT" },
+  { name: "Apple Hospitals Tanuku", district: "West Godavari", mandal: "Bhimavaram", type: "OTHER", phone: "087904 99777", category: "PRIVATE" },
+
+  { name: "Government RIMS Hospital, Kadapa", district: "YSR Kadapa", mandal: "Kadapa", type: "DH", phone: "085622 60233", category: "GOVERNMENT" },
+  { name: "KIMS Sunrise Hospital Kadapa", district: "YSR Kadapa", mandal: "Kadapa", type: "OTHER", phone: "08562 258 500", category: "PRIVATE" }
 ];
 
 async function seedPHCs() {
   try {
     const count = await PHC.countDocuments();
-    if (count > 0) {
-      console.log(`PHC seed skipped: ${count} records already exist.`);
+    if (count === 0) {
+      await PHC.insertMany(PHC_SEED);
+      console.log(`PHC seed completed: ${PHC_SEED.length} PHCs inserted.`);
       return;
     }
 
-    await PHC.insertMany(PHC_SEED);
-    console.log(`PHC seed completed: ${PHC_SEED.length} PHCs inserted.`);
+    for (const record of PHC_SEED) {
+      await PHC.updateOne(
+        { name: record.name, district: record.district },
+        { $set: record },
+        { upsert: true }
+      );
+    }
+    console.log(`PHC seed upsert completed: ${PHC_SEED.length} records processed.`);
   } catch (error) {
     console.error("PHC seed failed:", error.message);
   }

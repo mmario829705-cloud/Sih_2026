@@ -169,6 +169,42 @@
 .phc-badge-DH  { background: var(--gold-100); color: var(--gold-600); }
 .phc-badge-CHC { background: var(--sage-100); color: var(--sage-600); }
 .phc-badge-AH  { background: var(--amber-100); color: var(--amber-700); }
+.phc-badge-OTHER { background: var(--sand-deep); color: var(--ink); }
+
+/* ---------- Hospital Directory Sections ---------- */
+.hospital-directory {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.hospital-directory-split {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.hospital-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hospital-section-title {
+  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+  color: var(--teal-deep);
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+}
+
+.hospital-section-title--government {
+  border-bottom-color: var(--teal);
+}
+
+.hospital-section-title--private {
+  border-bottom-color: var(--gold-600);
+}
 
 .phc-card-details {
   display: flex;

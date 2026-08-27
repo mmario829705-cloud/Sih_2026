@@ -27,6 +27,11 @@ const phcSchema = new mongoose.Schema(
             trim: true,
             default: ""
         },
+        category: {
+            type: String,
+            enum: ["GOVERNMENT", "PRIVATE"],
+            default: null
+        },
         latitude: {
             type: String,
             trim: true,
